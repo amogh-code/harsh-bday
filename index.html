@@ -1,386 +1,227 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Happy Birthday Harshiiiii ❤️ — From Dishuu</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Harshiiiii ❤️</title>
 <style>
-  :root{
-    --bg:#000;
-    --panel: rgba(255,255,255,0.03);
-    --accent:#ff2d95;
-    --gold:#f5c16c;
-    --muted: rgba(255,255,255,0.07);
-  }
-  *{box-sizing:border-box; margin:0; padding:0}
-  html,body{height:100%}
-  body{
-    font-family: 'Montserrat', sans-serif;
-    background: radial-gradient(circle at 20% 10%, rgba(40,40,40,0.6), transparent 15%),
-                radial-gradient(circle at 80% 85%, rgba(20,20,20,0.4), transparent 10%),
-                linear-gradient(180deg,#000 0%, #070707 55%, #0b0b0b 100%);
-    color:#fff;
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+  body {
+    margin: 0;
+    background: linear-gradient(180deg, #000000, #0a0a0a 60%, #1a1a1a);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
   }
 
-  .card{
-    width: min(980px, 96vw);
-    border-radius:18px;
-    padding:20px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-    position:relative;
-    overflow:visible;
-    border: 1px solid rgba(255,255,255,0.04);
-    backdrop-filter: blur(6px) saturate(120%);
+  html {
+    scroll-behavior: smooth;
   }
 
-  /* small, efficient starfield */
-  .sky{ position:absolute; inset:0; z-index:0; pointer-events:none; }
-  .particle{
-    position:absolute;
-    width:3px; height:3px; border-radius:50%;
-    background: linear-gradient(180deg,var(--gold),var(--accent));
-    opacity: 0.06;
-    filter: blur(.4px);
-    animation: twinkle 6s linear infinite;
-    will-change: transform, opacity;
-  }
-  @keyframes twinkle { 0%{opacity:0.02; transform:scale(.8)} 50%{opacity:0.12; transform:scale(1.05)} 100%{opacity:0.02; transform:scale(.8)} }
-
-  .top{ display:flex; gap:16px; align-items:center; z-index:2; position:relative; }
-  .title{ flex:1; text-align:left; }
-  h1{
-    font-family: 'Great Vibes', serif;
-    font-size: clamp(34px, 5vw, 56px);
-    color:#fff;
-    margin-bottom:4px;
-    animation: neon 2.6s ease-in-out infinite alternate;
-    will-change: text-shadow;
-  }
-  @keyframes neon{
-    from { text-shadow: 0 6px 18px rgba(255,45,149,0.06) }
-    to   { text-shadow: 0 12px 40px rgba(255,45,149,0.2) }
-  }
-  .subtitle{ font-size:13px; color:#cfcfcf; opacity:.95; }
-
-  .photo-wrap{
-    width:220px; height:220px;
-    flex:0 0 220px;
-    border-radius:14px;
-    overflow:hidden;
-    display:flex; align-items:center; justify-content:center;
-    border: 1px solid rgba(255,255,255,0.06);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.7);
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
-    transform: translateY(0);
-    animation: floaty 4s ease-in-out infinite;
-  }
-  @keyframes floaty { 0%{ transform:translateY(0) } 50%{ transform:translateY(-10px) } 100%{ transform:translateY(0)} }
-  .photo{ width:100%; height:100%; object-fit:cover; display:block; transition: transform .6s ease; filter: contrast(1.03) saturate(1.02); }
-  .photo-wrap:hover .photo{ transform: scale(1.04) }
-
-  .grid{ display:grid; grid-template-columns: 1fr 320px; gap:14px; margin-top:14px; z-index:2; }
-  .panel{ border-radius:12px; padding:12px; border:1px solid var(--muted); background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)); box-shadow: 0 6px 14px rgba(0,0,0,0.6); }
-  .message{ font-size:15px; line-height:1.6; color:#eee; padding:14px; border-radius:10px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005)); }
-  .tiny{ font-size:12px;color:#cfcfcf;margin-bottom:8px }
-  .heart-anim{ font-size:18px; margin-left:6px; animation: beat 1.1s infinite; }
-  @keyframes beat{ 0%{transform:scale(1)} 50%{transform:scale(1.15)} 100%{transform:scale(1)} }
-
-  .confess{ margin-top:16px; font-family:'Great Vibes'; font-size: clamp(26px, 3.2vw, 44px); text-align:center; padding:12px; border-radius:10px; color:#fff; background: linear-gradient(90deg, rgba(255,45,149,0.04), rgba(245,193,108,0.02)); animation: pulse 2.2s infinite; }
-  @keyframes pulse{ 0%{transform:scale(1)} 50%{transform:scale(1.02)} 100%{transform:scale(1)} }
-
-  .meta{ display:flex; flex-direction:column; gap:10px; }
-  .badge{ display:flex; gap:10px; align-items:center; padding:8px; border-radius:8px; background: linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0.006)); border:1px solid rgba(255,255,255,0.02); }
-  .icon{ width:44px; height:44px; border-radius:8px; display:grid; place-items:center; font-size:18px; background: linear-gradient(180deg, rgba(255,45,149,0.12), rgba(245,193,108,0.05)); color:#fff; box-shadow:0 6px 12px rgba(0,0,0,0.5); }
-  .txt{ font-size:14px; color:#e9e9e9 } .sub{ font-size:12px; color:#cfcfcf; opacity:.95 }
-  .timer{ display:flex; justify-content:space-between; align-items:center; gap:10px; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.02); background: linear-gradient(90deg, rgba(255,255,255,0.006), rgba(255,255,255,0.01)); }
-  .timer .label{ font-size:12px; color:#cfcfcf } .timer .value{ font-size:16px; font-weight:800; color:var(--accent) }
-
-  .quote{ margin-top:10px; padding:10px; border-radius:8px; border:1px dashed rgba(255,255,255,0.03); background: linear-gradient(180deg, rgba(0,0,0,0.34), rgba(255,255,255,0.01)); font-style:italic; color:#ddd }
-
-  .hearts{ position:absolute; inset:auto 8px 8px 8px; z-index:1; pointer-events:none; display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
-  .big-love{ margin-top:14px; font-family:'Great Vibes'; font-size: clamp(26px,4.5vw,48px); color:#fff; text-align:center; text-shadow: 0 8px 20px rgba(255,45,149,0.08) }
-
-  @media (max-width:880px){ .grid{ grid-template-columns: 1fr; } .photo-wrap{ margin:0 auto; } .top{ flex-direction:column-reverse; align-items:center; gap:12px; text-align:center } .title{text-align:center} }
-
-  /* Reusable heart (pool) */
-  .confetti-heart{ position:absolute; left:0; top:0; pointer-events:none; opacity:0; transform:translateY(0) scale(.9); will-change: transform, opacity; display:block }
-  .confetti-heart.animate{ animation-name: riseUp; animation-fill-mode: forwards; }
-  @keyframes riseUp {
-    0%{ transform: translateY(12px) scale(.95); opacity:1 }
-    40%{ transform: translateY(-18px) scale(1.06); opacity:1 }
-    100%{ transform: translateY(-180px) scale(.9); opacity:0 }
+  header {
+    text-align: center;
+    padding: 80px 20px 20px;
   }
 
-  /* sparkle cursor (throttled) */
-  .spark{ position:fixed; pointer-events:none; z-index:9999; mix-blend-mode:screen; font-size:18px; opacity:0; transform:translate(-50%,-50%) rotate(-15deg); transition: opacity .2s }
+  h1 {
+    font-size: 3.5em;
+    color: #ff2f8e;
+    text-shadow: 0 0 20px #ff2f8e;
+    animation: glow 2s infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #ff2f8e; }
+    to { text-shadow: 0 0 40px #ff2f8e, 0 0 80px #ff2f8e; }
+  }
+
+  .msg {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+    line-height: 1.7em;
+    color: #f5f5f5;
+    animation: fadeIn 3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  .heart {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: beat 1s infinite;
+    margin: 50px auto;
+  }
+
+  .heart::before,
+  .heart::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: #ff2f8e;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .heart::before { top: -50px; left: 0; }
+  .heart::after { left: 50px; top: 0; }
+
+  @keyframes beat {
+    0%, 100% { transform: scale(1) rotate(-45deg); }
+    50% { transform: scale(1.3) rotate(-45deg); }
+  }
+
+  .photo {
+    display: block;
+    margin: 30px auto;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ff2f8e;
+    box-shadow: 0 0 30px #ff2f8e;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  .biglove {
+    text-align: center;
+    font-size: 2.5em;
+    color: #ff2f8e;
+    margin-top: 50px;
+    text-shadow: 0 0 30px #ff2f8e;
+    animation: glowtext 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glowtext {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+  }
+
+  .timer {
+    text-align: center;
+    color: #ccc;
+    margin-top: 40px;
+    font-size: 1.2em;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 80px;
+    font-size: 1.2em;
+    color: #888;
+  }
+
+  /* floating sparkles */
+  .sparkle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: #ff2f8e;
+    border-radius: 50%;
+    animation: sparkle 5s infinite ease-in-out;
+    opacity: 0.7;
+    z-index: -1;
+  }
+
+  @keyframes sparkle {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    50% { transform: translateY(-50px) scale(1.5); opacity: 0.3; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+  }
+
+  .dialogue {
+    text-align: center;
+    font-style: italic;
+    margin: 40px auto;
+    color: #aaa;
+    font-size: 1.2em;
+  }
+
 </style>
 </head>
 <body>
 
-<div class="card" role="main" aria-label="Birthday letter for Harshit from Disha">
-  <div class="sky" id="sky"></div>
+<header>
+  <h1>Happy Birthday, My Harshiiiii ❤️</h1>
+  <p class="msg">
+    Happy birthday to the man who fills my life with sunshine and my heart with joy.  
+    You’re my calm in chaos, my laughter in silence, my home in every heartbeat.  
+    Each day with you feels like a new reason to fall in love again.  
+    You make my world brighter, stronger, and endlessly beautiful. ❤️🫂💋🧿
+  </p>
+</header>
 
-  <div class="top">
-    <div class="title">
-      <h1>Happy Birthday, Harshiiiii ❤️</h1>
-      <div class="subtitle">From <strong>Disha</strong> — (Babyy • Motii • Jaann • Dishuu)</div>
-    </div>
+<div class="heart"></div>
+<img src="boy.jpeg" alt="Harshit" class="photo">
 
-    <div class="photo-wrap" title="Our picture — will try boy.jpeg then boy.png">
-      <!-- try boy.jpeg first, fallback to boy.png -->
-      <img class="photo" src="boy.jpeg" alt="Harshit & Disha" onerror="this.onerror=null; this.src='boy.png';">
-    </div>
-  </div>
+<div class="dialogue">“Excuse me... are you Paytm? Because I can’t stop scanning on you.” 😏</div>
 
-  <div class="grid">
-    <div class="panel">
-      <div class="message">
-        <div class="tiny">A customised love letter just for you, Harshit — my pasandida mard.</div>
-        <div style="font-size:1.02rem; color:#fff; line-height:1.7">
-          Happy birthday to the man who fills my life with sunshine and my heart with joy. Each day with you is a gift, and I'm so grateful for your love, support, and endless laughter. You make every moment brighter. <span class="heart-anim">❤️</span>
-        </div>
+<div class="biglove">I lovee youu my pasandida mard ❤️🫂💋🧿</div>
 
-        <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
-          <div class="badge" title="Fav things">
-            <div class="icon">🏏</div>
-            <div><div class="txt"><strong>Cricket</strong></div><div class="sub">You live for it</div></div>
-          </div>
-          <div class="badge">
-            <div class="icon">🏃‍♂️</div>
-            <div><div class="txt"><strong>Relay</strong></div><div class="sub">Team speedster</div></div>
-          </div>
-          <div class="badge">
-            <div class="icon">🏋️‍♂️</div>
-            <div><div class="txt"><strong>Gymrat</strong></div><div class="sub">The strongest</div></div>
-          </div>
-          <div class="badge">
-            <div class="icon">🏸</div>
-            <div><div class="txt"><strong>Badminton</strong></div><div class="sub">With me onlyy 💫</div></div>
-          </div>
-        </div>
+<div class="timer" id="timer"></div>
+<div class="timer" id="birthday"></div>
 
-        <div class="quote" style="margin-top:12px;">
-          Favourite dialogue: <strong>"Excuse me — Are you Paytm? Because I can't stop scanning on you."</strong>
-        </div>
-
-        <div class="confess">I lovee youu my pasandida mard ❤️🫂💋🧿</div>
-      </div>
-
-      <div style="display:flex; justify-content:center; margin-top:10px;">
-        <div class="big-love">I lovee youu — Harshiiiii 💘</div>
-      </div>
-    </div>
-
-    <aside class="meta">
-      <div class="panel">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-          <div><div style="font-size:13px; color:#cfcfcf">Upcoming Birthday</div><div style="font-size:14px; color:#fff; font-weight:700">Harshit (Harshiiiii) — Born 2007</div></div>
-          <div style="text-align:right;"><div style="font-size:12px;color:#cfcfcf">Turning</div><div style="font-size:20px; font-weight:900; color:var(--gold)" id="birthday-age">—</div></div>
-        </div>
-
-        <div class="timer"><div class="label">Time until birthday (7 Oct)</div><div class="value" id="birthday-count">loading…</div></div>
-        <div class="small" style="margin-top:8px">Birthday date used: <strong>7 October</strong></div>
-      </div>
-
-      <div class="panel">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-          <div><div style="font-size:13px; color:#cfcfcf">How long we've been dating</div><div style="font-size:14px; color:#fff; font-weight:700">Since 26 Apr 2023 — Anniversary</div></div>
-          <div style="text-align:right;"><div style="font-size:12px;color:#cfcfcf">As of now</div><div style="font-size:18px; font-weight:800; color:var(--accent)" id="dating-years">—</div></div>
-        </div>
-
-        <div class="timer"><div class="label">Duration (Y D H M S)</div><div class="value" id="dating-count">loading…</div></div>
-        <div class="small" style="margin-top:8px">Anniversary: <strong>26 April 2023</strong></div>
-      </div>
-
-      <div class="panel">
-        <div style="font-size:13px;color:#cfcfcf;margin-bottom:6px">Notes</div>
-        <div class="small">Sender: <strong>Disha</strong> (Babyy • Motii • Jaann • Dishuu)</div>
-        <div class="small">Receiver: <strong>Harshit</strong> (Harshiiiii)</div>
-        <div class="small" style="margin-top:8px">Fav colour: <strong>Black</strong></div>
-        <div style="margin-top:8px; text-align:center;"><button id="toggleConfetti" style="padding:8px 12px; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.06); color:#fff; cursor:pointer;">Toggle Confetti</button></div>
-      </div>
-    </aside>
-  </div>
-
-  <!-- pool container -->
-  <div id="confetti-pool" aria-hidden="true"></div>
-  <div id="sparkle" class="spark">✨</div>
+<div class="footer">
+  Forever yours, <br>
+  <b>Babyy Motii Jaann Dishuuu 💋</b>
 </div>
 
 <script>
-  /* ===== efficient starfield ===== */
-  const sky = document.getElementById('sky');
-  const PARTICLE_COUNT = 14; // lowered for performance
-  for(let i=0;i<PARTICLE_COUNT;i++){
-    const p = document.createElement('div');
-    p.className='particle';
-    p.style.left = (Math.random()*100) + '%';
-    p.style.top  = (Math.random()*100) + '%';
-    const size = (1 + Math.random()*3) + 'px';
-    p.style.width = size; p.style.height = size;
-    p.style.animationDuration = (5 + Math.random()*8) + 's';
-    p.style.opacity = (0.02 + Math.random()*0.1).toFixed(2);
-    sky.appendChild(p);
+  // floating sparkles ✨
+  for (let i = 0; i < 40; i++) {
+    let s = document.createElement("div");
+    s.className = "sparkle";
+    s.style.left = Math.random() * 100 + "vw";
+    s.style.top = Math.random() * 100 + "vh";
+    s.style.animationDelay = Math.random() * 5 + "s";
+    document.body.appendChild(s);
   }
 
-  /* ===== confetti hearts pool (reusable, fixed count) ===== */
-  const poolContainer = document.getElementById('confetti-pool');
-  poolContainer.style.position = 'absolute';
-  poolContainer.style.inset = '0';
-  poolContainer.style.pointerEvents = 'none';
-  const POOL_SIZE = 14;
-  const hearts = [];
-  for(let i=0;i<POOL_SIZE;i++){
-    const el = document.createElement('div');
-    el.className = 'confetti-heart';
-    el.style.opacity = 0;
-    el.style.left = '50%';
-    el.style.top = '50%';
-    el.style.fontSize = '20px';
-    el.style.transform = 'translate(-50%,-50%)';
-    el.style.transition = 'opacity .15s';
-    poolContainer.appendChild(el);
-    // ensure removal after animation end
-    el.addEventListener('animationend', ()=>{
-      el.classList.remove('animate');
-      el.style.opacity = 0;
-      // keep off screen
-      el.style.transform = 'translate(-50%,-50%)';
-    });
-    hearts.push(el);
-  }
-  let poolIndex = 0;
-  let confettiOn = true;
-  function spawnHeartOnce(){
-    if(!confettiOn) return;
-    const el = hearts[poolIndex];
-    poolIndex = (poolIndex + 1) % POOL_SIZE;
-    const emoji = ['💖','💘','💕','🫶','❤️'][Math.floor(Math.random()*5)];
-    el.textContent = emoji;
-    el.style.left = (5 + Math.random()*90) + '%';
-    el.style.top = (70 + Math.random()*20) + '%';
-    el.style.fontSize = (14 + Math.random()*28) + 'px';
-    const dur = (3 + Math.random()*2.5).toFixed(2);
-    // set animation duration dynamically
-    el.style.animationDuration = dur + 's';
-    el.style.opacity = 1;
-    // restart animation by reflow then add class
-    el.classList.remove('animate');
-    void el.offsetWidth;
-    el.classList.add('animate');
-  }
-  // spawn periodically but not too often
-  const SPAWN_INTERVAL_MS = 650;
-  const spawnInterval = setInterval(()=> spawnHeartOnce(), SPAWN_INTERVAL_MS);
-
-  document.getElementById('toggleConfetti').addEventListener('click', ()=>{
-    confettiOn = !confettiOn;
-    document.getElementById('toggleConfetti').innerText = confettiOn ? 'Toggle Confetti' : 'Confetti Off';
-  });
-
-  /* ===== Timers (lightweight, 1s interval) ===== */
-  const birthdayMonth = 9; // Oct
-  const birthdayDay = 7;
-  const birthYear = 2007;
-  const datingStart = new Date('2023-04-26T00:00:00');
-
-  const birthdayCountEl = document.getElementById('birthday-count');
-  const birthdayAgeEl = document.getElementById('birthday-age');
-  const datingCountEl = document.getElementById('dating-count');
-  const datingYearsEl = document.getElementById('dating-years');
-
-  function pad(n){ return String(n).padStart(2,'0'); }
-  function compute(){
+  function updateTimers() {
+    const anniversary = new Date("2023-04-26T00:00:00");
     const now = new Date();
-    // next birthday
-    let year = now.getFullYear();
-    let nextBday = new Date(year, birthdayMonth, birthdayDay, 0, 0, 0);
-    if(nextBday.getTime() < now.getTime()){
-      nextBday = new Date(year+1, birthdayMonth, birthdayDay, 0, 0, 0);
-    }
-    let diffMs = nextBday - now;
-    const days = Math.floor(diffMs / (1000*60*60*24));
-    diffMs -= days * (1000*60*60*24);
-    const hours = Math.floor(diffMs / (1000*60*60));
-    diffMs -= hours * (1000*60*60);
-    const minutes = Math.floor(diffMs / (1000*60));
-    diffMs -= minutes * (1000*60);
-    const seconds = Math.floor(diffMs / 1000);
-    birthdayCountEl.textContent = `${days}d ${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`;
-    const turningAge = nextBday.getFullYear() - birthYear;
-    birthdayAgeEl.textContent = turningAge + ' yrs';
+    const diff = now - anniversary;
 
-    // dating duration
-    let diff = Date.now() - datingStart.getTime();
-    if(diff < 0) diff = 0;
-    const secs = Math.floor(diff/1000);
-    const years = Math.floor(secs / (365.25*24*3600));
-    const remAfterYears = secs - Math.floor(years * 365.25*24*3600);
-    const daysD = Math.floor(remAfterYears / (24*3600));
-    const remAfterDays = remAfterYears - daysD*24*3600;
-    const hrsD = Math.floor(remAfterDays / 3600);
-    const remAfterHrs = remAfterDays - hrsD*3600;
-    const minsD = Math.floor(remAfterHrs / 60);
-    const secsD = remAfterHrs - minsD*60;
-    datingYearsEl.textContent = years + ' year' + (years!==1?'s':'');
-    datingCountEl.textContent = `${years}y ${daysD}d ${pad(hrsD)}h ${pad(minsD)}m ${pad(secsD)}s`;
-  }
-  compute();
-  setInterval(compute, 1000);
+    const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+    const days = Math.floor((diff / (1000 * 60 * 60 * 24)) % 365);
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
 
-  /* ===== keyboard easter: press 'e' for quick burst ===== */
-  document.addEventListener('keydown', (ev)=>{
-    if(ev.key.toLowerCase() === 'e'){
-      for(let i=0;i<8;i++){
-        setTimeout(()=> spawnHeartOnce(), i*80);
-      }
-    }
-  });
+    document.getElementById("timer").innerHTML =
+      `💞 Together since 26 April 2023 — ${years}y ${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-  /* ===== sparkle cursor — throttled ===== */
-  const spark = document.getElementById('sparkle');
-  let lastMove = 0;
-  let throttleMs = 60;
-  let lastUpdate = 0;
-  document.addEventListener('mousemove', (e)=>{
-    const now = Date.now();
-    if(now - lastUpdate < throttleMs) return;
-    lastUpdate = now;
-    spark.style.left = e.clientX + 'px';
-    spark.style.top  = e.clientY + 'px';
-    spark.style.opacity = 1;
-    // fade after idle with timeout
-    lastMove = now;
-  });
-  setInterval(()=>{
-    if(Date.now() - lastMove > 900){
-      spark.style.opacity = 0;
-    }
-  }, 400);
+    const nextBirthday = new Date("2025-10-07T00:00:00");
+    const bdiff = nextBirthday - now;
 
-  /* ===== cleanup when page hidden (stop spawn to save CPU) ===== */
-  document.addEventListener('visibilitychange', ()=>{
-    if(document.hidden){
-      clearInterval(spawnInterval);
+    if (bdiff > 0) {
+      const bdDays = Math.floor(bdiff / (1000 * 60 * 60 * 24));
+      const bdHours = Math.floor((bdiff / (1000 * 60 * 60)) % 24);
+      const bdMinutes = Math.floor((bdiff / (1000 * 60)) % 60);
+      const bdSeconds = Math.floor((bdiff / 1000) % 60);
+
+      document.getElementById("birthday").innerHTML =
+        `🎂 Counting down till the next one: ${bdDays} days, ${bdHours}h ${bdMinutes}m ${bdSeconds}s`;
     } else {
-      // restart if needed
-      // (simple, fire-and-forget — no double-interval risk because page hidden clears it)
-      setInterval(()=> spawnHeartOnce(), SPAWN_INTERVAL_MS);
+      document.getElementById("birthday").innerHTML = "🎉 It's your day, Harshit! 07 Oct 2007 🎂";
     }
-  });
+  }
 
-  /* ===== small accessibility: Tab focus reveals outlines (if user tabs) ===== */
-  document.addEventListener('keyup', (e)=>{
-    if(e.key==='Tab') document.body.classList.add('show-focus');
-  });
+  setInterval(updateTimers, 1000);
 </script>
+
 </body>
 </html>
